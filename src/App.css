@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
 }
 
-.App-link {
-  color: #61dafb;
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Font-family */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+/* Variables */
+:root {
+	--LightText: hsl(200, 15%, 8%);
+	--LightInput: hsl(0, 0%, 52%);
+	--LightBackground: hsl(0, 0%, 98%);
+	--LightElements: hsl(0, 0%, 100%);
+}
+
+body {
+	background-color: var(--LightBackground);
+	color: var(--LightText);
+	font-family: "Nunito Sans", sans-serif;
+}
+
+img {
+	width: 100%;
+	height: 15rem;
+}
+
+/* Header Styling */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 10vh;
+	color: var(--LightText);
+	background-color: var(--LightElements);
+}
+
+.header-title {
+	margin-left: 1rem;
+	font-weight: 800;
+}
+
+button {
+	background-color: var(--LightElements);
+	border: none;
+	cursor: pointer;
+	margin-right: 1rem;
+}
+
+/* Search components */
+
+.search-components {
+	background-color: var(--LightElements);
+}
+.search-bar {
+	border: none;
+}
+
+/* .search-logo {
+	background-color: var(--LightElements);
+} */
+
+/* Country Cards */
+.countries-card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.country-card {
+	background-color: var(--LightElements);
+	width: 20rem;
+	margin: 3rem;
+	border-radius: 0.5rem;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.country-flag {
+	width: 100%;
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.country-card .country-name {
+	font-weight: 800;
+	padding: 1rem 0 2rem 1rem;
+}
+
+.country-info {
+	font-weight: 600;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+}
+
+.country-info:last-child {
+	padding-bottom: 1.5rem;
+}
+
+.country-info span {
+	font-weight: 300;
 }
