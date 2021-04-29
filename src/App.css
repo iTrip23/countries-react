@@ -237,6 +237,7 @@ button .far.dark-theme {
 
 .country-card {
 	background-color: var(--LightElements);
+	color: var(--LightText);
 	width: 20rem;
 	margin: 2rem;
 	border-radius: 0.5rem;
@@ -263,10 +264,6 @@ button .far.dark-theme {
 	font-weight: 600;
 	padding-bottom: 1rem;
 	padding-left: 1rem;
-}
-
-.country-info:last-child {
-	padding-bottom: 1.5rem;
 }
 
 .country-info span {
