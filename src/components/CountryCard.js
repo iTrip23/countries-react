@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CountryCard = ({ country }) => {
+const CountryCard = ({ country, themeToggle }) => {
 	return (
-		<div className="country-card">
+		<div className={themeToggle ? 'country-card' : 'country-card dark-theme'}>
 			<img src={country.flag} className="country-flag" alt={`${country.name} flag`} />
 			<div className="card-body">
 				<h4 className='country-name'>{country.name}</h4>
