@@ -1,0 +1,54 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--LightText);
+	background-color: var(--LightElements);
+	padding: 2rem 3rem;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+header.dark-theme {
+	background-color: var(--DarkElements);
+	color: var(--DarkText);
+}
+
+.header-title {
+	margin-left: 1.5rem;
+	font-weight: 800;
+	font-size: 2rem;
+}
+
+.header-title.dark-theme {
+	background-color: var(--DarkElements);
+	color: var(--DarkText);
+}
+
+.button-toggle {
+	font-size: 1rem;
+	background-color: var(--LightElements);
+	border: none;
+	cursor: pointer;
+	margin-right: 1rem;
+}
+
+.fa-moon {
+	margin-right: 0.5rem;
+}
+
+.button-toggle.dark-theme {
+	background-color: var(--DarkElements);
+	color: var(--DarkText);
+}
+
+button .fas.dark-theme {
+	display: inline;
+}
+
+button .fas {
+	display: none;
+}
+
+button .far.dark-theme {
+	display: none;
+}
