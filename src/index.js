@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import countries from './data/countries.json'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App countries={countries} />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
