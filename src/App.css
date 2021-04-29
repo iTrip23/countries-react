@@ -73,60 +73,116 @@ body {
 	color: var(--LightText);
 	font-family: "Nunito Sans", sans-serif;
 }
-
+/* 
 img {
 	width: 100%;
 	height: 15rem;
-}
+} */
 
 /* Header Styling */
 header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	min-height: 10vh;
 	color: var(--LightText);
 	background-color: var(--LightElements);
+	padding: 2rem 3rem;
 }
 
 .header-title {
-	margin-left: 1rem;
+	margin-left: 1.5rem;
 	font-weight: 800;
+	font-size: 2rem;
 }
 
-button {
+.button-toggle {
+	font-size: 1rem;
 	background-color: var(--LightElements);
 	border: none;
 	cursor: pointer;
 	margin-right: 1rem;
 }
 
-/* Search components */
-
-.search-components {
-	background-color: var(--LightElements);
+.button-toggle .fas {
+	display: none;
 }
+
+/* Search and Filter components */
+
+.search-filter-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3rem;
+}
+
+.search-logo {
+	padding: 0 1rem;
+}
+
+.search-component {
+	background-color: var(--LightElements);
+	border-radius: 0.5rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
 .search-bar {
 	border: none;
+	font-size: 1rem;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	min-width: 30rem;
 }
 
-/* .search-logo {
+.filter-component {
 	background-color: var(--LightElements);
-} */
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	position: relative;
+	padding: 1.4rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 13rem;
+}
+
+.filter-component.open {
+	display: block;
+}
+
+.filter-component ul {
+	background-color: var(--LightElements);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	position: absolute;
+	display: none;
+	list-style: none;
+	padding: 1rem;
+	width: 100%;
+	border-radius: 0.5rem;
+	left: 0;
+	top: 110%;
+}
+
+.filter-component ul li {
+	margin: 0.3rem 0;
+	cursor: pointer;
+}
 
 /* Country Cards */
 .countries-card-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	align-items: center;
 }
 
 .country-card {
 	background-color: var(--LightElements);
 	width: 20rem;
-	margin: 3rem;
+	margin: 2rem;
 	border-radius: 0.5rem;
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .country-flag {

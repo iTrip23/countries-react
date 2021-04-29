@@ -3,9 +3,11 @@ import CountryCard from './CountryCard.js';
 
 const CountriesContainer = ({ countries }) => {
 	return (
-		<section className='countries-card-container'>
-			{countries.map((country, index) => <CountryCard key={country.numericCode} country={country} />)}
-		</section>
+		<div>
+			<section className='countries-card-container'>
+				{countries.map((country, index) => <CountryCard key={country.numericCode} country={country} />)}
+			</section>
+		</div>
 	)
 }
 
