@@ -105,3 +105,12 @@ img {
 .loading.loaded {
 	display: none;
 }
+
+/* Search and Filter Container */
+
+.search-filter-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3rem;
+}

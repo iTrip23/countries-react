@@ -2,11 +2,12 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header.js';
 import CountriesContainer from './components/CountriesContainer.js'
-import Search from './components/Search.js';
+import SearchAndFilter from './components/SearchAndFilter';
 
 function App() {
   const [countries, setCountries] = useState([]);
   const [searchValue, setSearchValue] = useState('');
+  const [region, setRegion] = useState([]);
 
   useEffect(() => fetchData(), []);
 
@@ -23,8 +24,13 @@ function App() {
   return (
     <div>
       <Header themeToggle={themeToggle} setThemeToggle={setThemeToggle} />
-      <Search themeToggle={themeToggle} searchValue={searchValue} setSearchValue={setSearchValue} />
-      <CountriesContainer themeToggle={themeToggle} countries={countries} searchValue={searchValue} />
+      <SearchAndFilter
+        themeToggle={themeToggle}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        countries={countries}
+        setRegion={setRegion} />
+      <CountriesContainer themeToggle={themeToggle} countries={region.length === 0 ? countries : region} searchValue={searchValue} />
     </div>
   );
 }
