@@ -1,8 +1,8 @@
 .country-card {
 	background-color: var(--LightElements);
 	color: var(--LightText);
-	width: 20rem;
-	margin: 2rem;
+	width: 22rem;
+	margin: 2.5rem;
 	border-radius: 0.5rem;
 	cursor: pointer;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -24,7 +24,7 @@
 	padding: 1rem 0 2rem 1rem;
 }
 
-.country-info {
+.country-infoM {
 	background-color: var(--LightElements);
 	color: var(--LightText);
 	font-weight: 600;
@@ -32,7 +32,7 @@
 	padding-left: 1rem;
 }
 
-.country-info.dark-theme {
+.country-infoM.dark-theme {
 	background-color: var(--DarkElements);
 	color: var(--DarkText);
 }

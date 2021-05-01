@@ -1,6 +1,40 @@
+.country-card-info {
+	display: flex;
+	justify-content: center;
+	margin: 5rem;
+}
+
+.country-info-flag {
+	width: 40rem;
+	height: auto;
+}
+
+.country-stats {
+	margin: 2rem 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.country-name {
+	font-weight: 800;
+}
+
+.country-stats-info {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	max-height: 20rem;
+	margin: 2rem 0;
+}
+
 .country-info {
 	background-color: var(--LightBackground);
 	color: var(--LightText);
+	font-weight: 600;
+	font-size: 1rem;
+	margin-bottom: 2rem;
 }
 
 .country-info.dark-theme {
@@ -17,11 +51,9 @@
 	align-items: center;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	border-radius: 0.5rem;
-	margin: 1rem;
-}
-
-.btn-text {
-	padding: 0 1rem;
+	margin: 5rem;
+	width: 10rem;
+	height: 2.5rem;
 }
 
 .back-btn.dark-theme {
@@ -29,10 +61,14 @@
 	color: var(--DarkText);
 }
 
+.btn-text {
+	padding: 0 1rem;
+}
+
 .fa-arrow-left {
 	padding: 1rem 0 1rem 0.5rem;
 }
-
+/* Border Country Buttons */
 .country-btn {
 	background-color: var(--LightElements);
 	color: var(--LightText);

@@ -4,7 +4,7 @@ header {
 	align-items: center;
 	color: var(--LightText);
 	background-color: var(--LightElements);
-	padding: 2rem 3rem;
+	padding: 2rem 6rem;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -14,7 +14,6 @@ header.dark-theme {
 }
 
 .header-title {
-	margin-left: 1.5rem;
 	font-weight: 800;
 	font-size: 2rem;
 }
@@ -29,7 +28,6 @@ header.dark-theme {
 	background-color: var(--LightElements);
 	border: none;
 	cursor: pointer;
-	margin-right: 1rem;
 }
 
 .fa-moon {
