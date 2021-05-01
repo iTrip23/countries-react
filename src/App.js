@@ -2,7 +2,9 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header.js';
 import CountriesContainer from './components/CountriesContainer.js'
-import SearchAndFilter from './components/SearchAndFilter';
+import SearchAndFilter from './components/SearchAndFilter.js';
+import CountryInfoCard from './components/CountryInfoCard.js';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -22,16 +24,25 @@ function App() {
   document.body.className = themeToggle ? 'parent' : 'parent dark-theme';
 
   return (
-    <div>
+    <BrowserRouter>
       <Header themeToggle={themeToggle} setThemeToggle={setThemeToggle} />
-      <SearchAndFilter
-        themeToggle={themeToggle}
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-        countries={countries}
-        setRegion={setRegion} />
-      <CountriesContainer themeToggle={themeToggle} countries={region.length === 0 ? countries : region} searchValue={searchValue} />
-    </div>
+      <Switch>
+        <Route exact path='/' render={() => (
+          <SearchAndFilter
+            themeToggle={themeToggle}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            countries={countries}
+            setRegion={setRegion} />)}
+        />
+        <Route exact path='/' render={() => <CountriesContainer
+          themeToggle={themeToggle}
+          countries={region.length === 0 ? countries : region}
+          searchValue={searchValue} />
+        } />
+        <Route exact path='/info' render={() => <CountryInfoCard themeToggle={themeToggle} countries={countries} />} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
