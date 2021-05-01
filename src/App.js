@@ -28,18 +28,20 @@ function App() {
       <Header themeToggle={themeToggle} setThemeToggle={setThemeToggle} />
       <Switch>
         <Route exact path='/' render={() => (
-          <SearchAndFilter
-            themeToggle={themeToggle}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            countries={countries}
-            setRegion={setRegion} />)}
+          <div>
+            <SearchAndFilter
+              themeToggle={themeToggle}
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+              countries={countries}
+              setRegion={setRegion} />
+            <CountriesContainer
+              themeToggle={themeToggle}
+              countries={region.length === 0 ? countries : region}
+              searchValue={searchValue} />
+          </div>
+        )}
         />
-        <Route exact path='/' render={() => <CountriesContainer
-          themeToggle={themeToggle}
-          countries={region.length === 0 ? countries : region}
-          searchValue={searchValue} />
-        } />
         <Route exact path='/info' render={() => <CountryInfoCard themeToggle={themeToggle} countries={countries} />} />
       </Switch>
     </BrowserRouter>
