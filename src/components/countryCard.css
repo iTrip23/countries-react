@@ -6,6 +6,7 @@
 	border-radius: 0.5rem;
 	cursor: pointer;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	text-decoration: none !important;
 }
 
 .country-card.dark-theme {
@@ -24,9 +25,16 @@
 }
 
 .country-info {
+	background-color: var(--LightElements);
+	color: var(--LightText);
 	font-weight: 600;
 	padding-bottom: 1rem;
 	padding-left: 1rem;
+}
+
+.country-info.dark-theme {
+	background-color: var(--DarkElements);
+	color: var(--DarkText);
 }
 
 .country-info span {

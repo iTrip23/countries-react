@@ -1,7 +1,7 @@
 import React from 'react';
 import CountryCard from './CountryCard.js';
 
-const CountriesContainer = ({ countries, searchValue, themeToggle }) => {
+const CountriesContainer = ({ countries, searchValue, themeToggle, setID }) => {
 	const filteredCountries = countries.filter(country => country.name.toLowerCase().includes(searchValue.toLowerCase()));
 	return (
 		<div>
@@ -12,6 +12,7 @@ const CountriesContainer = ({ countries, searchValue, themeToggle }) => {
 						country={country}
 						themeToggle={themeToggle}
 						countries={countries}
+						setID={setID}
 					/>)}
 			</section>
 		</div >

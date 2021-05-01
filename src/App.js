@@ -10,6 +10,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [region, setRegion] = useState([]);
+  const [id, setID] = useState('')
 
   useEffect(() => fetchData(), []);
 
@@ -28,7 +29,7 @@ function App() {
       <Header themeToggle={themeToggle} setThemeToggle={setThemeToggle} />
       <Switch>
         <Route exact path='/' render={() => (
-          <div>
+          <>
             <SearchAndFilter
               themeToggle={themeToggle}
               searchValue={searchValue}
@@ -38,11 +39,11 @@ function App() {
             <CountriesContainer
               themeToggle={themeToggle}
               countries={region.length === 0 ? countries : region}
-              searchValue={searchValue} />
-          </div>
+              searchValue={searchValue} setID={setID} />
+          </>
         )}
         />
-        <Route exact path='/info' render={() => <CountryInfoCard themeToggle={themeToggle} countries={countries} />} />
+        <Route exact path='/info' render={() => <CountryInfoCard themeToggle={themeToggle} countries={countries} id={id} />} />
       </Switch>
     </BrowserRouter>
   );
