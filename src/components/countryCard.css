@@ -46,4 +46,23 @@
 		width: 70vw;
 		margin: 1.5rem 0;
 	}
+	.country-flag {
+		height: 20vh;
+	}
+	.country-name-card {
+		font-weight: 800;
+		font-size: 1.3rem;
+		margin: 0.5rem;
+		padding: 0;
+	}
+	.card-body:last-child {
+		margin-bottom: 5rem;
+	}
+	.card-body {
+		margin: 0;
+	}
+	.country-infoM {
+		margin: 0.5rem;
+		padding: 0;
+	}
 }

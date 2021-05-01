@@ -10,7 +10,7 @@ const CountryCard = ({ country, themeToggle, setID }) => {
 			<div className={themeToggle ? 'country-card' : 'country-card dark-theme'}>
 				<img src={country.flag} className="country-flag" alt={`Loading ${country.name} flag`} />
 				<div className="card-body">
-					<h4 className='country-name'>{country.name}</h4>
+					<h4 className='country-name-card'>{country.name}</h4>
 					<p className={themeToggle ? 'country-infoM' : 'country-infoM dark-theme'}>Population: <span>{country.population}</span></p>
 					<p className={themeToggle ? 'country-infoM' : 'country-infoM dark-theme'}>Region: <span>{country.region}</span></p>
 					<p className={themeToggle ? 'country-infoM' : 'country-infoM dark-theme'}>Capital: <span>{country.capital}</span></p>
