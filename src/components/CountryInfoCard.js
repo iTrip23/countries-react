@@ -21,14 +21,18 @@ const CountryInfoCard = ({ themeToggle, countries, id }) => {
 				<div className='country-stats'>
 					<h3 className='country-name'>{country.name}</h3>
 					<div className='country-stats-info'>
-						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Native name: <span>{country.nativeName}</span></p>
-						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Population: <span>{country.population}</span></p>
-						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Region: <span>{country.region}</span></p>
-						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Sub Region: <span>{country.subregion}</span></p>
-						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Capital: <span>{country.capital}</span></p>
-						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Top Level Domain: <span>{country.topLevelDomain}</span></p>
-						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Currencies: {country.currencies.map((elem, index) => (<span key={index}> {elem.name} </span>))}</p>
-						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Languages: {country.languages.map((elem, index) => (<span key={index}> {elem.name} </span>))}</p>
+						<div className='first-part'>
+							<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Native name: <span>{country.nativeName}</span></p>
+							<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Population: <span>{country.population}</span></p>
+							<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Region: <span>{country.region}</span></p>
+							<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Sub Region: <span>{country.subregion}</span></p>
+							<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Capital: <span>{country.capital}</span></p>
+						</div>
+						<div className='second-part'>
+							<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Top Level Domain: <span>{country.topLevelDomain}</span></p>
+							<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Currencies: {country.currencies.map((elem, index) => (<span key={index}> {elem.name} </span>))}</p>
+							<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Languages: {country.languages.map((elem, index) => (<span key={index}> {elem.name} </span>))}</p>
+						</div>
 					</div>
 					<div className='border-countries'>
 						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Border Countries: {getBorderCountries(country.borders)}</p>
@@ -39,7 +43,7 @@ const CountryInfoCard = ({ themeToggle, countries, id }) => {
 	}
 
 	return (
-		<section className={themeToggle ? 'country-info' : 'country-info dark-theme'}>
+		<section className={themeToggle ? 'country-info-container' : 'country-info-container dark-theme'}>
 			<Link to='/' style={{ textDecoration: 'initial' }}>
 				<div className={themeToggle ? 'back-btn' : 'back-btn dark-theme'}><i className="fas fa-arrow-left"></i><p className='btn-text'>Back</p></div>
 			</Link>

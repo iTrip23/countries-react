@@ -40,3 +40,10 @@
 .country-info span {
 	font-weight: 300;
 }
+
+@media (max-width: 600px) {
+	.country-card {
+		width: 70vw;
+		margin: 1.5rem 0;
+	}
+}

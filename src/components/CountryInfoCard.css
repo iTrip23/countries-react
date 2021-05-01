@@ -14,6 +14,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	align-items: flex-start;
 }
 
 .country-name {
@@ -25,6 +26,7 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	align-items: flex-start;
 	max-height: 20rem;
 	margin: 2rem 0;
 }
@@ -62,7 +64,8 @@
 }
 
 .btn-text {
-	padding: 0 1rem;
+	padding: 0 0.5rem;
+	width: auto;
 }
 
 .fa-arrow-left {
@@ -82,4 +85,55 @@
 .country-btn.dark-theme {
 	background-color: var(--DarkElements);
 	color: var(--DarkText);
+}
+
+@media (max-width: 600px) {
+	.country-info-container {
+		margin: 1rem auto;
+		padding: 0;
+	}
+	.country-card-info {
+		width: 85vw;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		padding: 0;
+	}
+	.country-info-flag {
+		width: 85vw;
+		height: 25vh;
+	}
+	.country-stats {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+	}
+	.country-stats-info {
+		height: auto;
+		margin: 0;
+	}
+	.country-info {
+		margin: 0.2rem;
+		display: block;
+		margin-left: 1rem;
+	}
+	.first-part {
+		margin-bottom: 2rem;
+	}
+	.second-part {
+		margin-bottom: 2rem;
+	}
+	.back-btn {
+		margin: 2rem;
+		border-radius: 0.2rem;
+	}
+	.country-name {
+		margin: 2rem 1rem 1rem 1rem;
+	}
+
+	.country-btn {
+		display: block;
+		margin: 1rem;
+		border-radius: 0.2rem;
+	}
 }

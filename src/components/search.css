@@ -21,7 +21,7 @@
 	font-size: 1rem;
 	padding: 1.2rem;
 	border-radius: 0.5rem;
-	min-width: 30rem;
+	width: 30rem;
 }
 
 .search-bar:focus {
@@ -31,4 +31,20 @@
 .search-bar.dark-theme {
 	background-color: var(--DarkElements);
 	color: var(--DarkText);
+}
+
+@media (max-width: 600px) {
+	.search-component {
+		width: 90vw;
+		margin: 0;
+		padding: 0.5rem 0.4rem;
+		border-radius: 0.3rem;
+	}
+	.search-bar {
+		width: 80%;
+		padding: 0.5rem;
+	}
+	.search-logo {
+		padding: 0 1.5rem;
+	}
 }

@@ -112,6 +112,21 @@ img {
 .search-filter-container {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	margin: 4rem 6rem;
+}
+
+@media (max-width: 600px) {
+	.search-filter-container {
+		margin: 1.5rem;
+		display: flex;
+		flex-direction: column;
+	}
+	.countries-card-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		margin: auto;
+	}
 }
