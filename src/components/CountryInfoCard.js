@@ -37,7 +37,7 @@ const CountryInfoCard = ({ themeToggle, countries, id }) => {
 						</div>
 					</div>
 					<div className='border-countries'>
-						<p className={themeToggle ? 'country-info' : 'country-info dark-theme'}>Border Countries: {getBorderCountries(country.borders)}</p>
+						<p className={themeToggle ? 'country-infoB' : 'country-infoB dark-theme'}>Border Countries: {getBorderCountries(country.borders)}</p>
 					</div>
 				</div>
 			</div>
