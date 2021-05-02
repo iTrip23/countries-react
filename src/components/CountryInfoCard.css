@@ -130,10 +130,9 @@
 	.country-name {
 		margin: 2rem 1rem 1rem 1rem;
 	}
-
 	.country-btn {
-		display: block;
-		margin: 1rem;
+		display: inline-block;
+		margin: 0.4rem;
 		border-radius: 0.2rem;
 	}
 }
