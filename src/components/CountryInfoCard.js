@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CountryInfoCard.css';
 import { Link } from 'react-router-dom';
 
 const CountryInfoCard = ({ themeToggle, countries, id }) => {
+	const [countryID, setCountryID] = useState(id)
+
 	let filteredCountry;
-	const getCountry = id => filteredCountry = countries.filter(country => country.alpha3Code === id);
-	getCountry(id);
+	const getCountry = countryID => filteredCountry = countries.filter(country => country.alpha3Code === countryID);
+	getCountry(countryID);
 
 	const getBorderCountries = arr => {
 		const borderCountries = [];
-		arr.map(id => borderCountries.push(countries.filter(country => country.alpha3Code === id)));
-		return borderCountries.flat().map((country, index) => (<span key={index} onClick={() => getAndShowCountryInfo(country, index)}
+		arr.map(countryID => borderCountries.push(countries.filter(country => country.alpha3Code === countryID)));
+		return borderCountries.flat().map((country, index) => (<span key={index} onClick={() => setCountryID(country.alpha3Code)}
 			className={themeToggle ? 'country-btn' : 'country-btn dark-theme'}> {country.name} </span>));
 	}
 
@@ -47,8 +49,6 @@ const CountryInfoCard = ({ themeToggle, countries, id }) => {
 			<Link to='/' style={{ textDecoration: 'initial' }}>
 				<div className={themeToggle ? 'back-btn' : 'back-btn dark-theme'}><i className="fas fa-arrow-left"></i><p className='btn-text'>Back</p></div>
 			</Link>
-			<div id='parent-element'>
-			</div>
 			{filteredCountry.map((country, index) => getAndShowCountryInfo(country, index))}
 		</section>
 	)
